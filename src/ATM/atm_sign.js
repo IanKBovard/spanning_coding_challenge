@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import atmSign from './assets/atm_sign.png';
+import atmLogo from './assets/atm_sign.png';
+import logoGraffiti from './assets/graffiti.png'
 import './index.css';
 
 class AtmSign extends Component {
 	render() {
 		return (
 			<div className="atm-logo-container">
-				<img src={atmSign} className="atm-sign" alt="atm"/>
+				<img src={atmLogo} className="atm-logo" alt="atm-logo"/>
+				<img src={logoGraffiti} className="logo-graffiti"/>
 			</div>
 			)
 	}
