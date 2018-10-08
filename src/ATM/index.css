@@ -11,7 +11,6 @@ body {
 }
 .ATM {
 	display: inline-block;
-	text-align: center;
 	position: relative;
 }
 .atm-logo-container {
@@ -20,45 +19,43 @@ body {
 }
 .atm-logo {
 	position: relative;
-	width: 150%;
+	max-width: 100%;
 	border-radius: 6px;
   	box-shadow: 0 5px #999;
 }
 .logo-graffiti {
 	position: absolute;
-	width: 105%;
-	top: 13%;
-	left: 65%;
+	max-width: 100%;
+	top: 10%;
+	left: 44%;
 	opacity: .8;
 }
 .atm-body {
 	position: relative;
-	width: 150%;
 	height: 300px;
 	background-color: #F1F0E7;
 }
 .card-logos {
-	max-width: 100%;
+	max-width: 75%;
 }
 .atm-screen {
 	position: relative;
-	width: 60%;
-	height: 70%;
-	left: 18%;
+	width: 70%;
+	height: 50%;
+	left: 13.5%;
 	background-color: #7EB4D5;
 	border: 5px solid #E1E1D6;
 }
 .atm-button {
-	position: relative;
-	width: 10%;
+	width: 15%;
 	height: 10%;
+  	display: inline-block;
   	padding: 15px 25px;
   	outline: none;
   	background-color:#C1C1C1;
   	border: none;
   	border-radius: 3px;
   	box-shadow: 0 3px #999;
-  	right: 40%;
 }
 .atm-button:active {
   	box-shadow: 0 2px #999;
