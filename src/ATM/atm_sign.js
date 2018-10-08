@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import atmLogo from './assets/atm_sign.png';
 import logoGraffiti from './assets/graffiti.png'
-import './index.css';
 
 class AtmSign extends Component {
 	render() {
