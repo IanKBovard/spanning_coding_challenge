@@ -8,8 +8,11 @@ class AtmBody extends Component {
 		return (
 			<div className="atm-body">
 				<AtmCards />
+				<AtmButton buttonId="deposit-button" buttonDecoId="deposit-deco" value="deposit"/>
+				<AtmButton buttonId="withdraw-button" buttonDecoId="withdraw-deco" value="withdraw"/>
+				<AtmButton buttonId="balance-button" buttonDecoId="balance-deco" value="balance"/>
+				<AtmButton buttonId="reenter-pin-button" buttonDecoId="reenter-pin-deco" value="reenterPin"/>
 				<AtmScreen />
-				<AtmButton />
 			</div>
 			)
 	}

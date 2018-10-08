@@ -41,7 +41,7 @@ body {
 .atm-screen {
 	position: relative;
 	width: 70%;
-	height: 50%;
+	height: 55%;
 	left: 13.5%;
 	background-color: #7EB4D5;
 	border: 5px solid #E1E1D6;
@@ -54,11 +54,48 @@ body {
   	background-color:#C1C1C1;
   	border: none;
   	border-radius: 3px;
-  	box-shadow: 0 2px #999;
-  	right: 90%;
-  	top: 60%;
+  	box-shadow: 0 2px #9B9B9B;
 }
 .atm-button:active {
-  	box-shadow: 0 1px #999;
+  	box-shadow: 0 1px #9B9B9B;
   	transform: translateY(.1px);
+}
+.button-deco {
+	position: absolute;
+	background-color: #9B9B9B;
+	width: 15%;
+	height: .6%;
+}
+
+#deposit-button {
+	right: 90%;
+  	top: 55%;
+}
+#deposit-deco {
+	left: 5%;
+	top: 58%
+}
+#withdraw-button {
+	right: 90%;
+  	top: 47%;
+}
+#withdraw-deco {
+	left: 5%;
+	top: 50%
+}
+#balance-button {
+	right: 1%;
+  	top: 47%;
+}
+#balance-deco {
+	left: 80%;
+	top: 50%
+}
+#reenter-pin-button {
+	right: 1%;
+  	top: 55%;
+}
+#reenter-pin-deco {
+	left: 80%;
+	top: 58%
 }
