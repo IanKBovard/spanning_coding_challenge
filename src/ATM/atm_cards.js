@@ -5,7 +5,7 @@ class AtmCards extends Component {
 	render() {
 		return(
 			<div>
-				<img src={cardLogos} className="card-logos" alt="card-logos"/>
+				<img src={cardLogos} className="card-logos" alt="logos"/>
 			</div>
 			)
 	}
