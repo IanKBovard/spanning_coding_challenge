@@ -47,17 +47,18 @@ body {
 	border: 5px solid #E1E1D6;
 }
 .atm-button {
-	width: 15%;
-	height: 10%;
-  	display: inline-block;
-  	padding: 15px 25px;
+	position: absolute;
+	width: 9%;
+	height: 6%;
   	outline: none;
   	background-color:#C1C1C1;
   	border: none;
   	border-radius: 3px;
-  	box-shadow: 0 3px #999;
+  	box-shadow: 0 2px #999;
+  	right: 90%;
+  	top: 60%;
 }
 .atm-button:active {
-  	box-shadow: 0 2px #999;
-  	transform: translateY(.2px);
+  	box-shadow: 0 1px #999;
+  	transform: translateY(.1px);
 }
