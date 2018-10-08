@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import atmLogo from './assets/atm_sign.png';
 import logoGraffiti from './assets/graffiti.png'
 
-class AtmSign extends Component {
+class AtmLogo extends Component {
 	render() {
 		return (
 			<div className="atm-logo-container">
@@ -13,5 +13,5 @@ class AtmSign extends Component {
 	}
 
 }
-
-export default AtmSign;
+//color is #126CAE
+export default AtmLogo;

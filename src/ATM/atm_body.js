@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AtmCards from './atm_cards.js';
 import AtmScreen from './atm_screen.js';
+import AtmButton from './atm_button.js'
 
 class AtmBody extends Component {
 	render() {
@@ -8,6 +9,7 @@ class AtmBody extends Component {
 			<div className="atm-body">
 				<AtmCards />
 				<AtmScreen />
+				<AtmButton />
 			</div>
 			)
 	}
