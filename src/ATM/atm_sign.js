@@ -5,7 +5,7 @@ import './index.css';
 class AtmSign extends Component {
 	render() {
 		return (
-			<div>
+			<div className="atm-logo-container">
 				<img src={atmSign} className="atm-sign" alt="atm"/>
 			</div>
 			)
