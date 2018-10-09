@@ -72,13 +72,19 @@ body {
 .screen-text-balance {
 	position: absolute;
 	top: 30%;
-	left: 35%;
+	left: 26%;
 	z-index: 999;
 }
 .screen-text-broken {
 	position: absolute;
 	top: 30%;
 	left: 37%;
+	z-index: 999;
+}
+.screen-text-pin {
+	position: absolute;
+	top: 20%;
+	left: 16%;
 	z-index: 999;
 }
 .atm-button {

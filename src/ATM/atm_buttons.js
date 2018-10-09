@@ -48,7 +48,7 @@ class AtmButtons extends Component {
 			case 'Balance':
 				axios.get('https://swapi.co/api/starships/9/').then((response) => {
 					this.setState({
-						screenText: response.data.cost_in_credits,
+						screenText: `${response.data.cost_in_credits} credits` ,
 						screenTextClass: 'screen-text-balance',
 						withdrawText: false,
 						depositText: 'Home',
@@ -61,8 +61,8 @@ class AtmButtons extends Component {
 			break;
 			case 'Re-Enter PIN':
 				this.setState({
-					screenText: 'PIN Number',
-					screenTextClass: 'screen-text-welcome',
+					screenText: 'Enter your four digit PIN number',
+					screenTextClass: 'screen-text-pin',
 					withdrawText: 'Enter',
 					depositText: 'Home',
 					balanceText: false,
