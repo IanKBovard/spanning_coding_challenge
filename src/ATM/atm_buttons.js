@@ -19,6 +19,17 @@ class AtmButtons extends Component {
 
 		};
 	}
+	resetState() {
+		this.setState({ 
+			screenText: 'Please make a choice...',
+			screenTextClass: 'screen-text-welcome',
+			withdrawText: 'Withdraw',
+			depositText: 'Deposit',
+			balanceText: 'Balance',
+			reenterPinText: 'Re-Enter PIN',
+			selected: 'Home'
+		});
+	}
 	onInputChange(e) {
 		const reg = /^[0-9\b]+$/;
 		if(e === '' || reg.test(e)){
@@ -34,7 +45,6 @@ class AtmButtons extends Component {
 				switch(cardCheck) {
 					case "0":
 					case "1":
-						console.log('here')
 						this.setState({ card: 'Star' });
 						break;
 					case "2":
@@ -58,26 +68,9 @@ class AtmButtons extends Component {
 					default:
 						break;
 				}
-				this.setState({ 
-					screenText: 'Please make a choice...',
-					screenTextClass: 'screen-text-welcome',
-					withdrawText: 'Withdraw',
-					depositText: 'Deposit',
-					balanceText: 'Balance',
-					reenterPinText: 'Re-Enter PIN',
-					selected: 'Home'
-				});
 				break;
 			case 'Home':
-				this.setState({ 
-					screenText: 'Please make a choice...',
-					screenTextClass: 'screen-text-welcome',
-					withdrawText: 'Withdraw',
-					depositText: 'Deposit',
-					balanceText: 'Balance',
-					reenterPinText: 'Re-Enter PIN',
-					selected: 'Home'
-				});
+				this.resetState();
 			break;
 			case 'Withdraw':
 				this.setState({
