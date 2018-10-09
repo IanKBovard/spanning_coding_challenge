@@ -36,22 +36,24 @@ body {
 	height: 350px;
 	background-color: #F1F0E7;
 	margin: 0 auto;
+    box-shadow: inset 0px 5px 1px #BEBEBE;
 }
 .card-logos {
-	width: 80%;
 	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .spanning-logo {
 	position: absolute;
 	width: 30%;
-	top: 71%;
+	top: 74%;
 	left: 56.5%;
 }
 .body-graffiti {
 	position: absolute;
 	width: 40%;
 	left: 5%;
-	top: 64%;
+	top: 66%;
 }
 .atm-screen {
 	position: relative;
