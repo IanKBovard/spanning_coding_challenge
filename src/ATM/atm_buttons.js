@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AtmScreenText from './atm_screen_text.js';
+import AtmCards from './atm_cards.js';
 import axios from 'axios';
+
 class AtmButtons extends Component {
 	constructor(props) {
 		super(props);
@@ -20,8 +22,6 @@ class AtmButtons extends Component {
 	onInputChange(e) {
 		const reg = /^[0-9\b]+$/;
 		if(e === '' || reg.test(e)){
-			console.log(e);
-			console.log(reg.test(e));
 			this.setState({
 				pinInput: e
 			});
@@ -30,7 +30,43 @@ class AtmButtons extends Component {
 	handleClick(e){
 		switch(e.target.value) {
 			case 'Enter':
-				console.log(e.target.value);
+				let cardCheck = this.state.pinInput[3];
+				switch(cardCheck) {
+					case "0":
+					case "1":
+						console.log('here')
+						this.setState({ card: 'Star' });
+						break;
+					case "2":
+					case "3":
+						this.setState({ card: 'Pulse' });
+						break;
+					case "4":
+					case "5":
+						this.setState({ card: 'Maestro' });
+						break;
+					case "6":
+					case "7":
+						this.setState({ card: 'Mastercard' });
+						break;
+					case "8":
+						this.setState({ card: 'Plus'});
+						break;
+					case "9":
+						this.setState({ card: 'Visa' });
+						break;
+					default:
+						break;
+				}
+				this.setState({ 
+					screenText: 'Please make a choice...',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Withdraw',
+					depositText: 'Deposit',
+					balanceText: 'Balance',
+					reenterPinText: 'Re-Enter PIN',
+					selected: 'Home'
+				});
 				break;
 			case 'Home':
 				this.setState({ 
@@ -98,6 +134,7 @@ class AtmButtons extends Component {
 	render() {
 		return(
 			<div>
+				<AtmCards card={this.state.card}/>
 				<div id="placeholder-deco-1" className="button-deco"></div>
 				<div id="placeholder-deco-2" className="button-deco"></div>
 				<div id="placeholder-deco-3" className="button-deco"></div>

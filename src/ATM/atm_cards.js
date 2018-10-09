@@ -14,21 +14,16 @@ import plusSelected from './assets/plus_selected.png';
 import visaSelected from './assets/visa_selected.png';
 
 class AtmCards extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			selected: 'none'
-		};
-	}
 	render() {
+		console.log(this.props.card);
 		return(
 			<div className="card-logos">
-				<img src={starLogo} className="star-logo" alt="star"/>
-				<img src={pulseLogo} className="pulse-logo" alt="pulse"/>
-				<img src={maestroLogo} className="maestro-logo" alt="maestro"/>
-				<img src={mastercardLogo} className="mastercard-logo" alt="mastercard"/>
-				<img src={plusLogo} className="plus-logo" alt="plus"/>
-				<img src={visaLogo} className="visa-logo" alt="visa"/>
+				<img src={this.props.card === "Star" ?starSelected : starLogo} className="star-logo" alt="star"/>
+				<img src={this.props.card === "Pulse" ?pulseSelected : pulseLogo} className="pulse-logo" alt="pulse"/>
+				<img src={this.props.card === "Maestro" ?maestroSelected : maestroLogo} className="maestro-logo" alt="maestro"/>
+				<img src={this.props.card === "Mastercard" ? mastercardSelected : mastercardLogo} className="mastercard-logo" alt="mastercard"/>
+				<img src={this.props.card === "Plus" ?plusSelected : plusLogo} className="plus-logo" alt="plus"/>
+				<img src={this.props.card === "Visa" ?visaSelected : visaLogo} className="visa-logo" alt="visa"/>
 			</div>
 			)
 	}
