@@ -11,10 +11,27 @@ class AtmButtons extends Component {
 			depositText: 'Deposit',
 			balanceText: 'Balance',
 			reenterPinText: 'Re-Enter PIN',
+			selected: 'Home',
+			card: 'none',
+			pinInput: ''
+
 		};
 	}
+	onInputChange(e) {
+		const reg = /^[0-9\b]+$/;
+		if(e === '' || reg.test(e)){
+			console.log(e);
+			console.log(reg.test(e));
+			this.setState({
+				pinInput: e
+			});
+		};
+	};
 	handleClick(e){
 		switch(e.target.value) {
+			case 'Enter':
+				console.log(e.target.value);
+				break;
 			case 'Home':
 				this.setState({ 
 					screenText: 'Please make a choice...',
@@ -23,6 +40,7 @@ class AtmButtons extends Component {
 					depositText: 'Deposit',
 					balanceText: 'Balance',
 					reenterPinText: 'Re-Enter PIN',
+					selected: 'Home'
 				});
 			break;
 			case 'Withdraw':
@@ -33,6 +51,7 @@ class AtmButtons extends Component {
 					depositText: 'Home',
 					balanceText: false,
 					reenterPinText: false,
+					selected: 'Withdraw'
 				});
 			break;
 			case 'Deposit':
@@ -43,6 +62,7 @@ class AtmButtons extends Component {
 					depositText: 'Home',
 					balanceText: false,
 					reenterPinText: false,
+					selected: 'Deposit'
 				});
 			break;	
 			case 'Balance':
@@ -54,6 +74,7 @@ class AtmButtons extends Component {
 						depositText: 'Home',
 						balanceText: false,
 						reenterPinText: false,
+						selected: 'Balance'
 					});		
 				}).catch((error) => {
 					console.log(error)
@@ -67,6 +88,7 @@ class AtmButtons extends Component {
 					depositText: 'Home',
 					balanceText: false,
 					reenterPinText: false,
+					selected: 'Re-Enter PIN'
 				});
 			break;
 			default:
@@ -84,6 +106,7 @@ class AtmButtons extends Component {
 				<button id="placeholder-button-2" className="atm-button"></button>
 				<button id="placeholder-button-3" className="atm-button"></button>
 				<button id="placeholder-button-4" className="atm-button"></button>
+				{this.state.selected === "Re-Enter PIN" ?<form><input autoFocus className="pin-input" type="text" maxLength="4" value={this.state.pinInput} onChange={(e) =>{ this.onInputChange(e.target.value)}} /></form> : null}
 				<div id="deposit-deco" className="button-deco"></div>
 				<button id="deposit-button" className="atm-button" value={this.state.depositText} onClick={(e) => this.handleClick(e)}></button>
 				<div id="withdraw-deco" className="button-deco"></div>

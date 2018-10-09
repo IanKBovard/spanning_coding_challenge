@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 class AtmScreenText extends Component {
-	constructor(props) {
-		super(props);
-	}
+
 	render() {
 		return(
 			<div className="text-container">
