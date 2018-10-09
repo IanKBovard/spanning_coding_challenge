@@ -146,3 +146,35 @@ body {
 	left: 81.2%;
 	top: 58%;
 }
+#placeholder-button-1 {
+	right: 90%;
+  	top: 39%;
+}
+#placeholder-button-2 {
+	right: 90%;
+  	top: 31%;
+}
+#placeholder-button-3 {
+	right: 1%;
+  	top: 39%;
+}
+#placeholder-button-4 {
+	right: 1%;
+  	top: 31%;	
+}
+#placeholder-deco-1 {
+	right: 80%;
+  	top: 42%;
+}
+#placeholder-deco-2 {
+	right: 80%;
+  	top: 34%;
+}
+#placeholder-deco-3 {
+	right: 5%;
+  	top: 42%;
+}
+#placeholder-deco-4 {
+	right: 5%;
+  	top: 34%;
+}
