@@ -4,24 +4,24 @@ body {
  background-color: #9F80AC;
  font-family: "Lucida Console", Monaco, sans-serif;
  font-weight: bold;
- font-size: 14px;
+ font-size: 16px;
  color: #ffffff;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
 }
 .ATM {
-	display: inline-block;
 	position: relative;
 }
 .atm-logo-container {
 	position: relative;
-	display: inline-block;
+	background-color: #126CAE;
+	width: 400px;
+	border-radius: 6px;
+	margin: 0 auto;
 }
 .atm-logo {
 	position: relative;
-	max-width: 100%;
-	border-radius: 6px;
-  	box-shadow: 0 5px #999;
+	width: 75%;
 }
 .logo-graffiti {
 	position: absolute;
@@ -32,47 +32,49 @@ body {
 }
 .atm-body {
 	position: relative;
-	height: 300px;
+	width: 360px;
+	height: 350px;
 	background-color: #F1F0E7;
+	margin: 0 auto;
 }
 .card-logos {
-	width: 75%;
+	width: 80%;
 	display: inline-block;
 }
 .spanning-logo {
 	position: absolute;
 	width: 30%;
-	top: 74%;
-	left: 57%;
+	top: 71%;
+	left: 56.5%;
 }
 .body-graffiti {
 	position: absolute;
 	width: 40%;
 	left: 5%;
-	top: 66%;
+	top: 64%;
 }
 .atm-screen {
 	position: relative;
 	width: 70%;
-	height: 55%;
-	left: 13.5%;
+	height: 60%;
+	left: 14%;
 	background-color: #7EB4D5;
 	border: 5px solid #E1E1D6;
 }
 .screen-text-welcome {
 	position: absolute;
-	top: 30%;
-	left: 23%;
+	top: 26%;
+	left: 26%;
 	z-index: 999;
 }
 .atm-button {
 	position: absolute;
-	width: 9%;
-	height: 6%;
+	width: 8%;
+	height: 5%;
   	outline: none;
   	background-color:#C1C1C1;
   	border: none;
-  	border-radius: 1px;
+  	border-radius: 2px;
   	box-shadow: 0 2px #9B9B9B;
 }
 .atm-button:active {
@@ -86,13 +88,13 @@ body {
 	height: .6%;
 }
 .text-deco {
-	width: 4%;
+	width: 3%;
 	background-color: #ffffff;
 	z-index: 999;
 }
 .button-text {
 	position: absolute;
-	font-size: 12px;
+	font-size: 14px;
 	z-index: 999;
 }
 #withdraw-button-text {
@@ -100,7 +102,7 @@ body {
 	top: 47.9%;
 }
 #balance-button-text {
-	left: 65%;
+	left: 66.3%;
 	top: 47.9%;
 }
 #deposit-button-text {
@@ -108,79 +110,79 @@ body {
 	top: 56%;
 }
 #reenter-pin-button-text {
-	left: 56%;
+	left: 57.6%;
 	top: 56%;
 }
 #deposit-button {
-	right: 90%;
+	right: 88%;
   	top: 55%;
 }
 #deposit-deco {
-	left: 5%;
+	left: 10%;
 	top: 58%
 }
 #withdraw-button {
-	right: 90%;
+	right: 88%;
   	top: 47%;
 }
 #withdraw-deco {
-	left: 5%;
+	left: 10%;
 	top: 50%
 }
 #balance-button {
-	right: 1%;
+	right: 3%;
   	top: 47%;
 }
 #balance-deco {
-	left: 80%;
+	left: 75%;
 	top: 50%
 }
 #reenter-pin-button {
-	right: 1%;
+	right: 3%;
   	top: 55%;
 }
 #reenter-pin-deco {
-	left: 80%;
+	left: 78%;
 	top: 58%;
 }
 #deposit-text-deco {
-	left: 15.2%;
+	left: 15.4%;
 	top: 58%;
 }
 #withdraw-text-deco {
-	left: 15.2%;
+	left: 15.4%;
 	top: 50%;
 }
 #balance-text-deco {
-	left: 81.2%;
+	left: 82.4%;
 	top: 50%;
 }
 #reenter-pin-text-deco {
-	left: 81.2%;
+	left: 82.4%;
 	top: 58%;
 }
 #placeholder-button-1 {
-	right: 90%;
+	right: 88%;
   	top: 39%;
 }
 #placeholder-button-2 {
-	right: 90%;
+	right: 88%;
   	top: 31%;
 }
 #placeholder-button-3 {
-	right: 1%;
+	right: 3%;
   	top: 39%;
 }
 #placeholder-button-4 {
-	right: 1%;
+	right: 3%;
   	top: 31%;	
 }
 #placeholder-deco-1 {
-	right: 80%;
+	right: 75%;
   	top: 42%;
 }
 #placeholder-deco-2 {
-	right: 80%;
+	right: 75%;
   	top: 34%;
 }
 #placeholder-deco-3 {
