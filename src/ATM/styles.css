@@ -36,7 +36,20 @@ body {
 	background-color: #F1F0E7;
 }
 .card-logos {
-	max-width: 75%;
+	width: 75%;
+	display: inline-block;
+}
+.spanning-logo {
+	position: absolute;
+	width: 30%;
+	top: 74%;
+	left: 57%;
+}
+.body-graffiti {
+	position: absolute;
+	width: 40%;
+	left: 5%;
+	top: 66%;
 }
 .atm-screen {
 	position: relative;

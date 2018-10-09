@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AtmCards from './atm_cards.js';
 import AtmScreen from './atm_screen.js';
 import AtmButtons from './atm_buttons.js'
+import spanningLogo from './assets/spanning_systems.png';
+import bodyGraffiti from './assets/sticker_graf.png';
 
 class AtmBody extends Component {
 	render() {
@@ -10,6 +12,8 @@ class AtmBody extends Component {
 				<AtmCards />
 				<AtmButtons />
 				<AtmScreen />
+				<img className='spanning-logo' alt='spanning-logo' src={spanningLogo}/>
+				<img className='body-graffiti' alt='body-graffiti' src={bodyGraffiti}/>
 			</div>
 			)
 	}

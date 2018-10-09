@@ -7,7 +7,7 @@ class AtmLogo extends Component {
 		return (
 			<div className="atm-logo-container">
 				<img src={atmLogo} className="atm-logo" alt="atm-logo"/>
-				<img src={logoGraffiti} className="logo-graffiti"/>
+				<img src={logoGraffiti} className="logo-graffiti" alt="atm-logo-graffiti"/>
 			</div>
 			)
 	}
