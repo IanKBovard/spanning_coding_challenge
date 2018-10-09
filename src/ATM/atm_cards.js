@@ -7,6 +7,12 @@ import plusLogo from './assets/plus_logo.png';
 import visaLogo from './assets/visa_logo.png';
 
 class AtmCards extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			selected: 'none'
+		};
+	}
 	render() {
 		return(
 			<div className="card-logos">

@@ -5,12 +5,70 @@ class AtmButtons extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			screenText: "Please make a choice...",
-			screenTextClass: "screen-text-welcome"
+			screenText: 'Please make a choice...',
+			screenTextClass: 'screen-text-welcome',
+			withdrawText: 'Withdraw',
+			depositText: 'Deposit',
+			balanceText: 'Balance',
+			reenterPinText: 'Re-Enter PIN',
 		};
 	}
 	handleClick(e){
-		this.setState({ screenText: e.target.value });
+		console.log(e.target.value);
+		switch(e.target.value) {
+			case 'Home':
+				this.setState({ 
+					screenText: 'Please make a choice...',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Withdraw',
+					depositText: 'Deposit',
+					balanceText: 'Balance',
+					reenterPinText: 'Re-Enter PIN',
+				});
+			break;
+			case 'Withdraw':
+				this.setState({
+					screenText: 'Withdraw Money!',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Enter',
+					depositText: 'Home',
+					balanceText: false,
+					reenterPinText: false,
+				});
+			break;
+			case 'Deposit':
+				this.setState({
+					screenText: 'Deposit Money!',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Enter',
+					depositText: 'Home',
+					balanceText: false,
+					reenterPinText: false,
+				});
+			break;	
+			case 'Balance':
+				this.setState({
+					screenText: 'You Got Some Money!',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Enter',
+					depositText: 'Home',
+					balanceText: false,
+					reenterPinText: false,
+				});
+			break;
+			case 'Re-Enter PIN':
+				this.setState({
+					screenText: 'PIN Number',
+					screenTextClass: 'screen-text-welcome',
+					withdrawText: 'Enter',
+					depositText: 'Home',
+					balanceText: false,
+					reenterPinText: false,
+				});
+			break;
+			default:
+				break;			
+		}
 	}
 	render() {
 		return(
@@ -19,19 +77,19 @@ class AtmButtons extends Component {
 				<div id="placeholder-deco-2" className="button-deco"></div>
 				<div id="placeholder-deco-3" className="button-deco"></div>
 				<div id="placeholder-deco-4" className="button-deco"></div>
-				<button id="placeholder-button-1" className="atm-button"></button>
+				<button id="placeholder-button-1" className="atm-button" value={this.state.homeText}></button>
 				<button id="placeholder-button-2" className="atm-button"></button>
 				<button id="placeholder-button-3" className="atm-button"></button>
 				<button id="placeholder-button-4" className="atm-button"></button>
 				<div id="deposit-deco" className="button-deco"></div>
-				<button id="deposit-button" className="atm-button" value="Deposit" onClick={(e) => this.handleClick(e)}></button>
+				<button id="deposit-button" className="atm-button" value={this.state.depositText} onClick={(e) => this.handleClick(e)}></button>
 				<div id="withdraw-deco" className="button-deco"></div>
-				<button id="withdraw-button" className="atm-button" value="Withdraw" onClick={(e) => this.handleClick(e)}></button>
+				<button id="withdraw-button" className="atm-button" value={this.state.withdrawText} onClick={(e) => this.handleClick(e)}></button>
 				<div id="balance-deco" className="button-deco"></div>
-				<button id="balance-button" className="atm-button" value="Balance" onClick={(e) => this.handleClick(e)}></button>
+				<button id="balance-button" className="atm-button" value={this.state.balanceText} onClick={(e) => this.handleClick(e)}></button>
 				<div id="reenter-pin-deco" className="button-deco"></div>
-				<button id="reenter-pin-button" className="atm-button" value="Re-Enter PIN" onClick={(e) => this.handleClick(e)}></button>		
-				<AtmScreenText screenTextClass={this.state.screenTextClass} screenText={this.state.screenText}/>
+				<button id="reenter-pin-button" className="atm-button" value={this.state.reenterPinText} onClick={(e) => this.handleClick(e)}></button>		
+				<AtmScreenText screenText={this.state.screenText} screenTextClass={this.state.screenTextClass} withdrawText={this.state.withdrawText} balanceText={this.state.balanceText} depositText={this.state.depositText} reenterPinText={this.state.reenterPinText} />
 			</div>
 			)
 	}

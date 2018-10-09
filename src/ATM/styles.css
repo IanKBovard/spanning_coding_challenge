@@ -195,3 +195,6 @@ body {
 	right: 5%;
   	top: 34%;
 }
+.invisible {
+	visibility: 0;
+}
