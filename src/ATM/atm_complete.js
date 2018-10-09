@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AtmLogo from './atm_logo.js';
 import AtmBody from './atm_body.js';
-import './index.css';
+import './styles.css';
 
 
 class ATM extends Component {

@@ -5,7 +5,6 @@ class AtmScreen extends Component {
 	render() {
 		return (
 			<div className="atm-screen">
-				<AtmScreenText />
 			</div>
 			)
 	}

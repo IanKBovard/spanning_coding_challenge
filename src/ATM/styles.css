@@ -46,6 +46,12 @@ body {
 	background-color: #7EB4D5;
 	border: 5px solid #E1E1D6;
 }
+.screen-text-welcome {
+	position: absolute;
+	top: 30%;
+	left: 23%;
+	z-index: 999;
+}
 .atm-button {
 	position: absolute;
 	width: 9%;
@@ -53,20 +59,23 @@ body {
   	outline: none;
   	background-color:#C1C1C1;
   	border: none;
-  	border-radius: 3px;
+  	border-radius: 1px;
   	box-shadow: 0 2px #9B9B9B;
 }
 .atm-button:active {
   	box-shadow: 0 1px #9B9B9B;
   	transform: translateY(.1px);
 }
-.button-deco {
+.button-deco, .text-deco {
 	position: absolute;
 	background-color: #9B9B9B;
 	width: 15%;
 	height: .6%;
 }
-
+.text-deco {
+	width: 4%;
+	background-color: #ffffff;
+}
 #deposit-button {
 	right: 90%;
   	top: 55%;
@@ -97,5 +106,25 @@ body {
 }
 #reenter-pin-deco {
 	left: 80%;
-	top: 58%
+	top: 58%;
+}
+#deposit-text-deco {
+	left: 15.2%;
+	top: 58%;
+	z-index: 999;
+}
+#withdraw-text-deco {
+	left: 15.2%;
+	top: 50%;
+	z-index: 999;
+}
+#balance-text-deco {
+	left: 81.2%;
+	top: 50%;
+	z-index: 999;
+}
+#reenter-pin-text-deco {
+	left: 81.2%;
+	top: 58%;
+	z-index: 999;
 }
