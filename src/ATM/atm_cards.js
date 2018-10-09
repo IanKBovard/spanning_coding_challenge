@@ -6,6 +6,13 @@ import mastercardLogo from './assets/mastercard_logo.png';
 import plusLogo from './assets/plus_logo.png';
 import visaLogo from './assets/visa_logo.png';
 
+import starSelected from './assets/star_selected.png';
+import pulseSelected from './assets/pulse_selected.png';
+import maestroSelected from './assets/maestro_selected.png';
+import mastercardSelected from './assets/mastercard_selected.png';
+import plusSelected from './assets/plus_selected.png';
+import visaSelected from './assets/visa_selected.png';
+
 class AtmCards extends Component {
 	constructor(props) {
 		super(props);

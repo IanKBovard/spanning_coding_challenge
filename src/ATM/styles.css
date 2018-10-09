@@ -26,8 +26,8 @@ body {
 .logo-graffiti {
 	position: absolute;
 	max-width: 100%;
-	top: 10%;
-	left: 44%;
+	top: 13%;
+	left: 45%;
 	opacity: .8;
 }
 .atm-body {
@@ -67,6 +67,18 @@ body {
 	position: absolute;
 	top: 26%;
 	left: 26%;
+	z-index: 999;
+}
+.screen-text-balance {
+	position: absolute;
+	top: 30%;
+	left: 35%;
+	z-index: 999;
+}
+.screen-text-broken {
+	position: absolute;
+	top: 30%;
+	left: 37%;
 	z-index: 999;
 }
 .atm-button {

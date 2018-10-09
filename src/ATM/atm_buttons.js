@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AtmScreenText from './atm_screen_text.js';
-
+import axios from 'axios';
 class AtmButtons extends Component {
 	constructor(props) {
 		super(props);
@@ -14,7 +14,6 @@ class AtmButtons extends Component {
 		};
 	}
 	handleClick(e){
-		console.log(e.target.value);
 		switch(e.target.value) {
 			case 'Home':
 				this.setState({ 
@@ -28,8 +27,8 @@ class AtmButtons extends Component {
 			break;
 			case 'Withdraw':
 				this.setState({
-					screenText: 'Withdraw Money!',
-					screenTextClass: 'screen-text-welcome',
+					screenText: 'Out-of-order',
+					screenTextClass: 'screen-text-broken',
 					withdrawText: 'Enter',
 					depositText: 'Home',
 					balanceText: false,
@@ -38,8 +37,8 @@ class AtmButtons extends Component {
 			break;
 			case 'Deposit':
 				this.setState({
-					screenText: 'Deposit Money!',
-					screenTextClass: 'screen-text-welcome',
+					screenText: 'Out-of-order',
+					screenTextClass: 'screen-text-broken',
 					withdrawText: 'Enter',
 					depositText: 'Home',
 					balanceText: false,
@@ -47,13 +46,17 @@ class AtmButtons extends Component {
 				});
 			break;	
 			case 'Balance':
-				this.setState({
-					screenText: 'You Got Some Money!',
-					screenTextClass: 'screen-text-welcome',
-					withdrawText: 'Enter',
-					depositText: 'Home',
-					balanceText: false,
-					reenterPinText: false,
+				axios.get('https://swapi.co/api/starships/9/').then((response) => {
+					this.setState({
+						screenText: response.data.cost_in_credits,
+						screenTextClass: 'screen-text-balance',
+						withdrawText: false,
+						depositText: 'Home',
+						balanceText: false,
+						reenterPinText: false,
+					});		
+				}).catch((error) => {
+					console.log(error)
 				});
 			break;
 			case 'Re-Enter PIN':
