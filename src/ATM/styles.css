@@ -75,6 +75,28 @@ body {
 .text-deco {
 	width: 4%;
 	background-color: #ffffff;
+	z-index: 999;
+}
+.button-text {
+	position: absolute;
+	font-size: 12px;
+	z-index: 999;
+}
+#withdraw-button-text {
+	left: 20%;
+	top: 47.9%;
+}
+#balance-button-text {
+	left: 65%;
+	top: 47.9%;
+}
+#deposit-button-text {
+	left: 20%;
+	top: 56%;
+}
+#reenter-pin-button-text {
+	left: 56%;
+	top: 56%;
 }
 #deposit-button {
 	right: 90%;
@@ -111,20 +133,16 @@ body {
 #deposit-text-deco {
 	left: 15.2%;
 	top: 58%;
-	z-index: 999;
 }
 #withdraw-text-deco {
 	left: 15.2%;
 	top: 50%;
-	z-index: 999;
 }
 #balance-text-deco {
 	left: 81.2%;
 	top: 50%;
-	z-index: 999;
 }
 #reenter-pin-text-deco {
 	left: 81.2%;
 	top: 58%;
-	z-index: 999;
 }
